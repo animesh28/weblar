@@ -1,0 +1,24 @@
+import styled from "styled-components";
+
+export const NavContainer = styled.div`
+  width: 100%;
+  padding: 1.6rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 1.6rem;
+`;
+
+export const NavLinks = styled.div`
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: ${(props) => props.theme.dark};
+
+  & > * {
+    margin: 0 1rem;
+  }
+`;
