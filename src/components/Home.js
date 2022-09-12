@@ -1,5 +1,13 @@
+import Landing from "../subcomponents/Landing";
+import Services from "../subcomponents/Services";
+
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <Landing />
+      <Services />
+    </>
+  );
 };
 
 export default Home;

@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import { load } from "google-fonts-loader";
 
 const App = () => {
-  load({ Poppins: ["400", "500"] });
+  load({ Poppins: ["400", "500"], Lato: ["500"] });
   return (
     <div className="App">
       <GlobalStyles />

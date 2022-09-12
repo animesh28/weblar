@@ -19,6 +19,15 @@ export const NavLinks = styled.div`
   color: ${(props) => props.theme.dark};
 
   & > * {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
+  }
+
+  & > .nav-links {
+    border-bottom: 2.5px solid transparent;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      border-bottom: 2.5px solid ${(props) => props.theme.aqua};
+    }
   }
 `;

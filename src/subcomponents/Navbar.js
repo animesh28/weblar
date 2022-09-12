@@ -5,13 +5,19 @@ import CTAButton from "./CTAButton";
 
 const Navbar = () => {
   return (
-    <NavContainer>
+    <NavContainer className="nav">
       <NavLogo />
 
       <NavLinks>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        <Link className="nav-links" to="/">
+          Home
+        </Link>
+        <Link className="nav-links" to="/about">
+          About
+        </Link>
+        <Link className="nav-links" to="/contact">
+          Contact
+        </Link>
         <CTAButton navButton={true} />
       </NavLinks>
     </NavContainer>
