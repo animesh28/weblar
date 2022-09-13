@@ -28,7 +28,7 @@ export const SliderHeadContainer = styled.div`
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 28px;
+    font-size: 2.8rem;
     margin: 0 3rem;
     position: relative;
   }
@@ -37,7 +37,7 @@ export const SliderHeadContainer = styled.div`
 export const Line = styled.span`
   width: 20rem;
   height: 4px;
-  background-color: ${(props) => props.theme.lineColor};
+  background-color: ${(props) => props.theme.offWhite};
 `;
 
 export const SliderContainer = styled.div`
@@ -62,7 +62,7 @@ export const SliderContainer = styled.div`
 export const ServiceText = styled.div`
   margin-top: 5rem;
   padding: 5rem;
-  border-top: 2px solid ${(props) => props.theme.white};
+  border-top: 2px solid ${(props) => props.theme.offWhite};
 `;
 
 export const ServiceCardContainer = styled.div`
@@ -84,8 +84,8 @@ export const CardDetails = styled.div`
     font-family: "Maglony", cursive;
     font-style: normal;
     font-weight: 400;
-    font-size: 28px;
-    line-height: 28px;
+    font-size: 2.8rem;
+    line-height: 2.8rem;
     margin-bottom: 1.6rem;
   }
 
@@ -93,7 +93,8 @@ export const CardDetails = styled.div`
     font-family: "Lato";
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    color: ${(props) => props.theme.lineColor};
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: ${(props) => props.theme.offWhite};
   }
 `;

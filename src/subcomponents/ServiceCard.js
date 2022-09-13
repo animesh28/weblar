@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, CardDetails } from "../styles/ServicesStyles";
 
 const ServiceCard = ({ icon, title }) => {

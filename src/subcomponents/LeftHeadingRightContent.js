@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import SectionHeading from "./SectionHeading";
 import { withTheme } from "styled-components";

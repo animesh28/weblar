@@ -7,7 +7,7 @@ export const theme = {
   aqua: "#43DDE6",
   darkBlue: "#364F6B",
   dark: "#333333",
-  lineColor: "#D9D9D9",
+  offWhite: "#D9D9D9",
   logoColor: "#394149",
 };
 
@@ -22,6 +22,10 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+    }
+
+    *:focus, *:hover {
+        outline: none;
     }
 
     body {
@@ -41,6 +45,23 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none;
         color: ${theme.dark};
     }
+
+    input, textarea {
+        border: none;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active{
+        -webkit-box-shadow: 0 0 0 30px ${theme.logoColor} inset !important;
+    }
+
+    input:-webkit-autofill {
+        -webkit-text-fill-color: ${theme.white} !important;
+    }
+
+    
 
     @keyframes moveUp {
         0%{

@@ -1,4 +1,3 @@
-import React from "react";
 import SectionHeading from "./SectionHeading";
 import { withTheme } from "styled-components";
 import { WorkCardContainer, WorkContainer } from "../styles/WorksStyles";
@@ -32,7 +31,12 @@ const Works = (props) => {
       <SectionHeading title="Our Works" color={props.theme.darkBlue} />
       <WorkCardContainer>
         {works.map((work, i) => (
-          <WorkCard head={work.head} content={work.content} img={work.img} />
+          <WorkCard
+            key={`work-project_${i}`}
+            head={work.head}
+            content={work.content}
+            img={work.img}
+          />
         ))}
       </WorkCardContainer>
       <CTAButton text="View More" />

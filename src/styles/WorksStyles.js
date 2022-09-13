@@ -35,6 +35,10 @@ export const WorkCardContent = styled.div`
   align-items: center;
   text-align: left;
   box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.15);
+
+  & svg {
+    cursor: pointer;
+  }
 `;
 
 export const WorkCardText = styled.div`

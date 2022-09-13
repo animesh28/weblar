@@ -44,12 +44,13 @@ export const CopyRight = styled.div`
   font-family: "Poppins";
   font-weight: 400;
   font-size: 1.6rem;
-  border-top: 2px solid ${(props) => props.theme.lineColor};
+  border-top: 2px solid ${(props) => props.theme.offWhite};
 `;
 
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: 16rem;
 
   & h3 {
     font-family: "Poppins";
