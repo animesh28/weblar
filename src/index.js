@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import Navbar from "./subcomponents/Navbar";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./globalStyles";
+import Footer from "./subcomponents/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,6 +14,7 @@ root.render(
       <ThemeProvider theme={theme}>
         <Navbar />
         <App />
+        <Footer />
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>

@@ -65,29 +65,6 @@ export const ServiceText = styled.div`
   border-top: 2px solid ${(props) => props.theme.white};
 `;
 
-export const ServiceDescription = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  & > h2 {
-    width: 45%;
-    font-family: "Lato";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 72px;
-    line-height: 86px;
-  }
-
-  & > p {
-    width: 45%;
-    font-family: "Lato";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 28px;
-  }
-`;
-
 export const ServiceCardContainer = styled.div`
   min-height: 50vh;
   display: grid;

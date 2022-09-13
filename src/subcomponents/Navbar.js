@@ -1,12 +1,13 @@
 import { NavContainer, NavLinks } from "../styles/NavbarStyles";
-import { NavLogo } from "./AllSvg";
+import { BrandLogo } from "./AllSvg";
 import { Link } from "react-router-dom";
 import CTAButton from "./CTAButton";
+import { withTheme } from "styled-components";
 
-const Navbar = () => {
+const Navbar = ({ theme }) => {
   return (
     <NavContainer className="nav">
-      <NavLogo />
+      <BrandLogo color={theme.logoColor} />
 
       <NavLinks>
         <Link className="nav-links" to="/">
@@ -18,10 +19,10 @@ const Navbar = () => {
         <Link className="nav-links" to="/contact">
           Contact
         </Link>
-        <CTAButton navButton={true} />
+        <CTAButton navButton={true} text="Home" />
       </NavLinks>
     </NavContainer>
   );
 };
 
-export default Navbar;
+export default withTheme(Navbar);

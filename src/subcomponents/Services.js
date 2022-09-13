@@ -3,9 +3,9 @@ import {
   ServiceContainer,
   ServiceContent,
   ServiceText,
-  ServiceDescription,
   ServiceCardContainer,
 } from "../styles/ServicesStyles";
+import LeftHeadingRightContent from "./LeftHeadingRightContent";
 import { CardSeparator, Design, Development, Marketing } from "./AllSvg";
 import ServiceCard from "./ServiceCard";
 import Slider from "./Slider";
@@ -22,19 +22,13 @@ const Services = (props) => {
       <ServiceContent>
         <Slider />
         <ServiceText>
-          <ServiceDescription>
-            <h2>
-              Our services
-              <br />
-              that we provide
-            </h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et ut
-              nunc, libero dolor, gravida. In metus, tortor, nunc sed egestas
-              erat diam arcu. Laoreet orci nisl etiam risus ut nec. Facilisi
-              ipsum viverra diam arcu massa amet non metus ornare.
-            </p>
-          </ServiceDescription>
+          <LeftHeadingRightContent
+            head="Our services that we provide"
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et ut nunc,
+            libero dolor, gravida. In metus, tortor, nunc sed egestas erat diam
+            arcu. Laoreet orci nisl etiam risus ut nec. Facilisi ipsum viverra diam
+            arcu massa amet non metus ornare."
+          />
         </ServiceText>
         <ServiceCardContainer>
           {cardLogos.map((card, i, arr) => {

@@ -8,6 +8,7 @@ export const theme = {
   darkBlue: "#364F6B",
   dark: "#333333",
   lineColor: "#D9D9D9",
+  logoColor: "#394149",
 };
 
 const GlobalStyles = createGlobalStyle`
