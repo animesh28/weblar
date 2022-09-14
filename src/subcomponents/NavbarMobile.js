@@ -60,17 +60,17 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 const menuItems = [
   {
     name: "Home",
-    icon: <HomeIcon />,
+    icon: <HomeIcon fontSize="large" />,
     path: "/",
   },
   {
     name: "About",
-    icon: <InfoIcon />,
+    icon: <InfoIcon fontSize="large" />,
     path: "/about",
   },
   {
     name: "Contact",
-    icon: <ContactMailIcon />,
+    icon: <ContactMailIcon fontSize="large" />,
     path: "/contact",
   },
 ];
@@ -98,7 +98,7 @@ const NavbarMobile = (props) => {
             edge="start"
             sx={{ mr: 2, ...(open && { display: "none" }) }}
           >
-            <MenuIcon />
+            <MenuIcon fontSize="large" />
           </IconButton>
           <Link to="/">
             <BrandLogo

@@ -9,14 +9,14 @@ export const LandingContainer = styled.div`
 
   ${mediaQueries(70)`
       flex-direction: column;
-      margin: 2rem 0;
+      margin: 3rem 0;
       text-align: center;
   `};
 
   ${mediaQueries(56)`
       height: 95vh;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
   `};
 
   & > div {
@@ -60,7 +60,8 @@ export const LandingContent = styled.div`
     font-weight: 400;
 
     ${mediaQueries(70)`
-      margin: 1rem 0;
+      margin: 2.5rem 0;
+      width: 80%;
     `};
   }
 `;

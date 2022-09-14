@@ -17,6 +17,7 @@ export const WorkCardContainer = styled.div`
   ${mediaQueries(65)`
       display: flex;
       flex-direction: column;
+      margin: 2rem 0 4rem 0;
   `};
 `;
 
