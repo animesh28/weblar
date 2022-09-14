@@ -22,6 +22,8 @@ import {
 import { Address, Call } from "../subcomponents/ContactInfo";
 import SocialIcons from "../subcomponents/SocialIcons";
 import CTAButton from "../subcomponents/CTAButton";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = ({ theme }) => {
   const formik = useFormik({
@@ -35,6 +37,17 @@ const Contact = ({ theme }) => {
 
   return (
     <ContactContainer>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <SectionHeading title="Connect with us" color={theme.darkBlue} />
 
       <FormContainer>
