@@ -7,7 +7,9 @@ import { withTheme } from "styled-components";
 const Navbar = ({ theme }) => {
   return (
     <NavContainer className="nav">
-      <BrandLogo color={theme.logoColor} />
+      <Link to="/">
+        <BrandLogo color={theme.logoColor} />
+      </Link>
 
       <NavLinks>
         <Link className="nav-links" to="/">

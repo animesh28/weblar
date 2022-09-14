@@ -73,12 +73,9 @@ export const validationSchema = Yup.object({
 
 export const handleSubmit = async (values) => {
   try {
-    await axios.post(
-      "https://animesh28-portfolio-server.herokuapp.com/send_email",
-      {
-        ...values,
-      }
-    );
+    await axios.post("https://weblar-animesh.herokuapp.com/send_email", {
+      ...values,
+    });
 
     toast.success("E-mail sent successfully", {
       position: "bottom-right",

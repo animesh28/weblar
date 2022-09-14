@@ -21,12 +21,14 @@ import {
 } from "../utils/FormUtils";
 import { Address, Call } from "../subcomponents/ContactInfo";
 import SocialIcons from "../subcomponents/SocialIcons";
+import CTAButton from "../subcomponents/CTAButton";
 
 const Contact = ({ theme }) => {
   const formik = useFormik({
     initialValues,
     validationSchema,
     onSubmit: (values, { resetForm }) => {
+      console.log("submitting");
       handleSubmit(values);
     },
   });
@@ -74,6 +76,8 @@ const Contact = ({ theme }) => {
               ) : null}
             </FormInputWrapper>
           </FormInputContainer>
+          <br />
+          <CTAButton text="Submit" handler={formik.handleSubmit} />
         </Form>
         <CTAContainer>
           <CTAWrapper>{Address()}</CTAWrapper>

@@ -1,5 +1,5 @@
 // Import Swiper React components
-import { Navigation } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Logo1, Logo2, Logo3, Logo4 } from "./AllSvg";
 import {
@@ -29,7 +29,11 @@ const Slider = () => {
         <Line />
       </SliderHeadContainer>
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
+        autoplay={{
+          delay: 1000,
+          disableOnInteraction: false,
+        }}
         navigation
         breakpoints={{
           400: {
