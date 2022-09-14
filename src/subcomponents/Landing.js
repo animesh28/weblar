@@ -22,9 +22,7 @@ const Landing = (props) => {
         </p>
         <CTAButton text="Let’s Talk" />
       </LandingContent>
-      <LandingImage>
-        <img src={cover} alt="cover" />
-      </LandingImage>
+      <LandingImage img={cover}></LandingImage>
     </LandingContainer>
   );
 };

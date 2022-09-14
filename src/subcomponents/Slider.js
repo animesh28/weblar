@@ -28,7 +28,21 @@ const Slider = () => {
         <h2>Trusted Companies</h2>
         <Line />
       </SliderHeadContainer>
-      <Swiper modules={[Navigation]} slidesPerView={4} navigation>
+      <Swiper
+        modules={[Navigation]}
+        navigation
+        breakpoints={{
+          400: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          1300: {
+            slidesPerView: 4,
+          },
+        }}
+      >
         {logos.map((logo, i) => (
           <SwiperSlide key={`company-logo_${i}`}>{logo}</SwiperSlide>
         ))}

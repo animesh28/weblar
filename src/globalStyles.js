@@ -11,6 +11,22 @@ export const theme = {
   logoColor: "#394149",
 };
 
+export const breakpoints = {
+  sm: 20, //em
+  md: 30,
+  lg: 45,
+  xl: 60,
+  xxl: 75,
+};
+
+export const mediaQueries = (key) => {
+  return (style) => `@media (max-width: ${key}rem) { ${style} }`;
+};
+
+export const mediaQueriesMin = (key) => {
+  return (style) => `@media (min-width: ${key}rem) { ${style} }`;
+};
+
 const GlobalStyles = createGlobalStyle`
     @font-face {
         font-family: Maglony;
@@ -32,9 +48,12 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 30px 50px 0;
         overflow-x: hidden;
-        font-size: 1.6rem;
         caret-color: rgba(0,0,0,0);
         color: ${theme.dark};
+
+        ${mediaQueries(56)`
+            padding: 30px 20px 0;       
+        `};
     }
 
     html {

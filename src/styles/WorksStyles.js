@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQueries } from "../globalStyles";
 
 export const WorkContainer = styled.div`
   text-align: center;
@@ -12,6 +13,11 @@ export const WorkCardContainer = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
   margin: 8rem 0 6rem 0;
+
+  ${mediaQueries(65)`
+      display: flex;
+      flex-direction: column;
+  `};
 `;
 
 export const WorkCardWrapper = styled.div`
@@ -36,6 +42,11 @@ export const WorkCardContent = styled.div`
   text-align: left;
   box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.15);
 
+  ${mediaQueries(31)`
+      grid-template-columns: 0.9fr 0.2fr;
+      padding: 2rem 1.4rem;
+  `};
+
   & svg {
     cursor: pointer;
   }
@@ -47,11 +58,19 @@ export const WorkCardText = styled.div`
     font-weight: 500;
     font-size: 2.4rem;
     margin-bottom: 1rem;
+
+    ${mediaQueries(31)`
+      font-size: 2rem;
+  `};
   }
 
   & p {
     font-family: "Poppins";
     font-weight: 400;
     font-size: 1.6rem;
+
+    ${mediaQueries(31)`
+      font-size: 1.4rem;
+  `};
   }
 `;

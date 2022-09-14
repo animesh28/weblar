@@ -17,6 +17,7 @@ const Footer = ({ theme }) => {
   return (
     <FooterContainer id="footer">
       <LeftHeadingRightContent
+        className="footer-LeftHeadingRightContent"
         head="Let’s work together"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et consectetur ut nunc, libero dolor, gravida. In metus, tortor, nunc sed egestas erat arcu."
         button={<CTAButton text="Let’s Talk" />}

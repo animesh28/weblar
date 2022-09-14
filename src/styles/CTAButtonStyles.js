@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQueries } from "../globalStyles";
 
 export const Button = styled.div`
   background: ${(props) => props.theme.aqua};
@@ -18,6 +19,15 @@ export const Button = styled.div`
   color: ${(props) => (props.navButton ? "inherit" : "#000")};
   font-size: 2rem;
 
+  ${mediaQueries(70)`
+      width: 17rem;
+      height: 4.4rem;
+  `};
+
+  ${mediaQueries(50)`
+      font-size: 1.5rem;
+  `};
+
   &::after {
     content: "";
     display: inline-block;
@@ -32,6 +42,12 @@ export const Button = styled.div`
     animation: moveUp 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
     background-color: rgba(67, 221, 230, 0.7);
+
+    ${mediaQueries(56)`
+      width: 0;
+      height: 0;
+      visibility: hidden;
+    `};
   }
 
   &:hover {
