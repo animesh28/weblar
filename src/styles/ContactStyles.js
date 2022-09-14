@@ -5,7 +5,7 @@ export const ContactContainer = styled.div`
 
 export const FormContainer = styled.div`
   display: grid;
-  grid-template-columns: 0.5fr 0.4fr;
+  grid-template-columns: 0.55fr 0.3fr;
   gap: 6rem;
   margin-top: 4rem;
 `;
@@ -15,10 +15,6 @@ export const Form = styled.form`
   color: ${(props) => props.theme.white};
   padding: 4.4rem;
   border-radius: 2.4rem;
-`;
-
-export const CTAContainer = styled.div`
-  background: black;
 `;
 
 export const FormInputContainer = styled.div`
@@ -86,4 +82,35 @@ export const FormError = styled.div`
   margin: 0.5rem 0;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+`;
+
+export const CTAContainer = styled.div``;
+
+export const CTAWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 3.2rem 0;
+
+  &:not(:last-child) {
+    border-bottom: 2px solid rgba(51, 51, 51, 0.5);
+  }
+
+  & h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+
+  & a {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  & div.social-icons {
+    margin-top: 1.5rem;
+  }
 `;

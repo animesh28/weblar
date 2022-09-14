@@ -2,11 +2,12 @@ import {
   ContactContainer,
   FormContainer,
   Form,
-  CTAContainer,
   FormHeadContainer,
   FormInputContainer,
   FormInputWrapper,
   FormError,
+  CTAContainer,
+  CTAWrapper,
 } from "../styles/ContactStyles";
 import SectionHeading from "../subcomponents/SectionHeading";
 import { withTheme } from "styled-components";
@@ -18,6 +19,8 @@ import {
   formInputGenerator,
   formTextAreaGenerator,
 } from "../utils/FormUtils";
+import { Address, Call } from "../subcomponents/ContactInfo";
+import SocialIcons from "../subcomponents/SocialIcons";
 
 const Contact = ({ theme }) => {
   const formik = useFormik({
@@ -72,7 +75,14 @@ const Contact = ({ theme }) => {
             </FormInputWrapper>
           </FormInputContainer>
         </Form>
-        <CTAContainer></CTAContainer>
+        <CTAContainer>
+          <CTAWrapper>{Address()}</CTAWrapper>
+          <CTAWrapper>{Call()}</CTAWrapper>
+          <CTAWrapper>
+            <h3>Social Icons</h3>
+            <SocialIcons cirlcecolor={theme.aqua} />
+          </CTAWrapper>
+        </CTAContainer>
       </FormContainer>
     </ContactContainer>
   );

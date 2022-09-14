@@ -22,7 +22,7 @@ export const FooterText = styled.div`
   align-items: flex-start;
 `;
 
-export const SocialIcons = styled.div`
+export const SocialIconsWrap = styled.div`
   margin-top: 2.6rem;
 
   & > * {

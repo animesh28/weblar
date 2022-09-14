@@ -1,7 +1,6 @@
 import * as Yup from "yup";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { FormInputWrapper } from "../styles/ContactStyles";
 
 export const formInputGenerator = (name, formik) => {
   const nameArr = name.split(" ");

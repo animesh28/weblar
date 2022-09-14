@@ -3,15 +3,15 @@ import {
   FooterContent,
   LogoContainer,
   FooterText,
-  SocialIcons,
   CopyRight,
   TextContainer,
 } from "../styles/FooterStyles";
 import LeftHeadingRightContent from "./LeftHeadingRightContent";
 import CTAButton from "./CTAButton";
 import { withTheme } from "styled-components";
-import { BrandLogo, Instagram, Twitter, Facebook } from "./AllSvg";
+import { BrandLogo } from "./AllSvg";
 import { Address, Call, Policies } from "./ContactInfo";
+import SocialIcons from "./SocialIcons";
 
 const Footer = ({ theme }) => {
   return (
@@ -24,11 +24,7 @@ const Footer = ({ theme }) => {
       <FooterContent>
         <LogoContainer>
           <BrandLogo color={theme.white} />
-          <SocialIcons>
-            <Instagram />
-            <Twitter />
-            <Facebook />
-          </SocialIcons>
+          <SocialIcons />
         </LogoContainer>
         <FooterText>
           <TextContainer>
