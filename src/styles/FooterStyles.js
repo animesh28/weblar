@@ -30,6 +30,10 @@ export const FooterContainer = styled.div`
         flex-direction: column;
         align-items: center;
       }
+
+      & p {
+        margin-top: 2rem;
+      }
     `};
 
     ${mediaQueries(30)`

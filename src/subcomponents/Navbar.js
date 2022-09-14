@@ -19,7 +19,7 @@ const Navbar = ({ theme }) => {
         <Link className="nav-links" to="/contact">
           Contact
         </Link>
-        <CTAButton navButton={true} text="Home" />
+        <CTAButton navButton={true} text="Get in Touch" />
       </NavLinks>
     </NavContainer>
   );
