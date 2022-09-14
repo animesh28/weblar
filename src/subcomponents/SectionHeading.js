@@ -10,7 +10,7 @@ const Heading = styled.h2`
   color: ${(props) => props.color};
 
   ${mediaQueries(70)`
-      font-size: 48px;
+      font-size: 42px;
   `};
 `;
 

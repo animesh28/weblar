@@ -19,6 +19,8 @@ export const breakpoints = {
   xxl: 75,
 };
 
+export const sm = window.matchMedia("(max-width: 56em)").matches;
+
 export const mediaQueries = (key) => {
   return (style) => `@media (max-width: ${key}rem) { ${style} }`;
 };
@@ -80,7 +82,11 @@ const GlobalStyles = createGlobalStyle`
         -webkit-text-fill-color: ${theme.white} !important;
     }
 
-    
+    p {
+        ${mediaQueries(50)`
+            text-align: justify;
+        `};
+    }
 
     @keyframes moveUp {
         0%{

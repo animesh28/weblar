@@ -68,6 +68,7 @@ export const WorkCardText = styled.div`
     font-family: "Poppins";
     font-weight: 400;
     font-size: 1.6rem;
+    text-align: left;
 
     ${mediaQueries(31)`
       font-size: 1.4rem;

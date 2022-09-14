@@ -9,8 +9,10 @@ import LeftHeadingRightContent from "./LeftHeadingRightContent";
 import { CardSeparator, Design, Development, Marketing } from "./AllSvg";
 import ServiceCard from "./ServiceCard";
 import Slider from "./Slider";
+import line from "../assets/HorizontalLine.png";
+
 const sm = window.matchMedia("(max-width: 65rem)").matches;
-const Services = (props) => {
+const Services = () => {
   const cardLogos = [
     { title: "Design", icon: <Design /> },
     { title: "Development", icon: <Development /> },
@@ -36,6 +38,9 @@ const Services = (props) => {
               <React.Fragment key={`service-card_${i}`}>
                 <ServiceCard icon={card.icon} title={card.title} />
                 {!sm && i < arr.length - 1 ? <CardSeparator /> : null}
+                {sm && i < arr.length - 1 ? (
+                  <img src={line} alt="divider" />
+                ) : null}
               </React.Fragment>
             );
           })}

@@ -1,20 +1,23 @@
 import * as React from "react";
 import { styled, useTheme } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import CssBaseline from "@mui/material/CssBaseline";
+import {
+  Box,
+  Typography,
+  Drawer,
+  CssBaseline,
+  Toolbar,
+  List,
+  Divider,
+  IconButton,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 import MuiAppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
@@ -24,7 +27,9 @@ import CTAButton from "./CTAButton";
 import { CTANavContainer } from "../styles/NavbarStyles";
 import { Link } from "react-router-dom";
 
-const drawerWidth = 240;
+const sm = window.matchMedia("(max-width: 25em)").matches;
+
+const drawerWidth = sm ? 200 : 240;
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
@@ -132,10 +137,16 @@ const NavbarMobile = (props) => {
         <List>
           {menuItems.map((item, i) => (
             <ListItem key={`${item.name}_${i}`} disablePadding>
-              <Link to={item.path}>
+              <Link to={item.path} style={{ width: "100%" }}>
                 <ListItemButton>
                   <ListItemIcon>{item.icon}</ListItemIcon>
-                  <ListItemText primary={item.name} />
+                  <ListItemText
+                    primary={
+                      <Typography type="body2" style={{ fontSize: "1.4rem" }}>
+                        {item.name}
+                      </Typography>
+                    }
+                  />
                 </ListItemButton>
               </Link>
             </ListItem>

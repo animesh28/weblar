@@ -104,7 +104,7 @@ export const ServiceText = styled.div`
   `};
 
   ${mediaQueries(43)`
-      padding: 2rem 0;
+      padding: 2rem 0 2.5rem 0;
   `};
 
   & h2 {
@@ -157,7 +157,9 @@ export const Card = styled.div`
   `};
 
   ${mediaQueries(43)`
-      padding: 2rem;
+      padding: 3rem 2rem;
+
+      
   `};
 `;
 
