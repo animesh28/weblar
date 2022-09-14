@@ -100,15 +100,17 @@ const NavbarMobile = (props) => {
           >
             <MenuIcon />
           </IconButton>
-          <BrandLogo
-            color={props.theme.logoColor}
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-            }}
-          />
+          <Link to="/">
+            <BrandLogo
+              color={props.theme.logoColor}
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+              }}
+            />
+          </Link>
         </Toolbar>
       </AppBar>
       <Drawer
