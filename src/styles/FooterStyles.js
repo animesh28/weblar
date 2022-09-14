@@ -10,9 +10,14 @@ export const FooterContainer = styled.div`
 
   ${mediaQueries(48)`
       padding: 3rem 3rem 0;
+      margin-top: 5rem;
   `};
 
   & .footer-LeftHeadingRightContent {
+    ${mediaQueries(48)`
+      margin-bottom: 5rem;
+    `};
+
     ${mediaQueries(48)`
       align-items: center;
 

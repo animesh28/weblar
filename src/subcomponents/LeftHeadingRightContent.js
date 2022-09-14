@@ -11,6 +11,8 @@ const ServiceDescription = styled.div`
 
   ${mediaQueries(65)`
       flex-direction: column;
+      text-align: center;
+      align-items: center;
   `};
 
   & > h2 {
@@ -37,6 +39,10 @@ const SectionContent = styled.div`
 
   ${mediaQueries(65)`
       width: 75%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
   `};
 `;
 

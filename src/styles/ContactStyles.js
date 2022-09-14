@@ -1,6 +1,18 @@
 import styled from "styled-components";
+import { mediaQueries } from "../globalStyles";
+
 export const ContactContainer = styled.div`
   padding: 9.5rem 0;
+
+  ${mediaQueries(56)`
+      padding: 6rem 0 0 0;
+    `};
+
+  & h2 {
+    ${mediaQueries(56)`
+      text-align: center;
+    `};
+  }
 `;
 
 export const FormContainer = styled.div`
@@ -8,6 +20,15 @@ export const FormContainer = styled.div`
   grid-template-columns: 0.55fr 0.3fr;
   gap: 6rem;
   margin-top: 4rem;
+
+  ${mediaQueries(70)`
+      grid-template-columns: 0.65fr 0.3fr;
+  `};
+
+  ${mediaQueries(56)`
+      display: flex;
+      flex-direction: column;
+  `};
 `;
 
 export const Form = styled.form`
@@ -20,6 +41,10 @@ export const Form = styled.form`
 export const FormInputContainer = styled.div`
   display: flex;
   margin: 1.5rem 0;
+
+  ${mediaQueries(56)`
+      flex-direction: column;
+  `};
 `;
 
 export const FormInputWrapper = styled.div`
@@ -29,6 +54,11 @@ export const FormInputWrapper = styled.div`
 
   &:nth-of-type(2) {
     margin-left: 2.5rem;
+
+    ${mediaQueries(56)`
+      margin-left: 0;
+      margin-top: 2rem;
+  `};
   }
 
   & label {
@@ -84,7 +114,11 @@ export const FormError = styled.div`
   font-weight: 400;
 `;
 
-export const CTAContainer = styled.div``;
+export const CTAContainer = styled.div`
+  ${mediaQueries(56)`
+      text-align: center;
+  `};
+`;
 
 export const CTAWrapper = styled.div`
   display: flex;
