@@ -31,6 +31,7 @@ export const WorkCardImg = styled.div`
   background-size: contain;
   background-position: center;
   height: 35rem;
+  box-shadow: inset 0px -4px 8px rgba(0, 0, 0, 0.15);
 `;
 
 export const WorkCardContent = styled.div`
@@ -41,7 +42,6 @@ export const WorkCardContent = styled.div`
   justify-items: end;
   align-items: center;
   text-align: left;
-  box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.15);
 
   ${mediaQueries(31)`
       grid-template-columns: 0.9fr 0.2fr;

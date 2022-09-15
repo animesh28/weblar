@@ -10,6 +10,7 @@ import { CardSeparator, Design, Development, Marketing } from "./AllSvg";
 import ServiceCard from "./ServiceCard";
 import Slider from "./Slider";
 import line from "../assets/HorizontalLine.png";
+import { Bounce } from "react-awesome-reveal";
 
 const sm = window.matchMedia("(max-width: 65rem)").matches;
 const Services = () => {
@@ -36,7 +37,9 @@ const Services = () => {
           {cardLogos.map((card, i, arr) => {
             return (
               <React.Fragment key={`service-card_${i}`}>
-                <ServiceCard icon={card.icon} title={card.title} />
+                <Bounce delay={700}>
+                  <ServiceCard icon={card.icon} title={card.title} />
+                </Bounce>
                 {!sm && i < arr.length - 1 ? <CardSeparator /> : null}
                 {sm && i < arr.length - 1 ? (
                   <img src={line} alt="divider" />

@@ -6,6 +6,10 @@ import CTAButton from "./CTAButton";
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
+import { Fade } from "react-awesome-reveal";
+
+const sm = window.matchMedia("(max-width: 65em)").matches;
+//on small device removing variable animation delay since flex-col
 
 const works = [
   {
@@ -31,12 +35,9 @@ const Works = (props) => {
       <SectionHeading title="Our Works" color={props.theme.darkBlue} />
       <WorkCardContainer>
         {works.map((work, i) => (
-          <WorkCard
-            key={`work-project_${i}`}
-            head={work.head}
-            content={work.content}
-            img={work.img}
-          />
+          <Fade key={`work-project_${i}`} delay={sm ? 500 : i * 500 + 500}>
+            <WorkCard head={work.head} content={work.content} img={work.img} />
+          </Fade>
         ))}
       </WorkCardContainer>
       <CTAButton text="View More" />

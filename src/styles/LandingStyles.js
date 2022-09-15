@@ -35,7 +35,7 @@ export const LandingContent = styled.div`
       align-items: center;
   `};
 
-  & > h2 {
+  & h2 {
     ${mediaQueries(70)`
       font-size: 48px;
       line-height: 56px;
@@ -52,7 +52,7 @@ export const LandingContent = styled.div`
     `};
   }
 
-  & > p {
+  & p {
     margin: 4rem 0;
     font-size: 1.6rem;
     font-family: "Lato";
@@ -70,6 +70,7 @@ export const LandingImage = styled.div`
   background: url(${(props) => props.img}) no-repeat;
   background-size: contain;
   background-position-x: right;
+  height: 100%;
 
   ${mediaQueries(70)`
       margin-top: 2rem;

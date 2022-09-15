@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { mediaQueries } from "../globalStyles";
 
 export const ContactContainer = styled.div`
-  padding: 9.5rem 0;
+  padding: 4rem 0;
 
   ${mediaQueries(56)`
       padding: 6rem 0 0 0;
